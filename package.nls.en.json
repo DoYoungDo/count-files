@@ -1,0 +1,5 @@
+{
+    "description": "Count number of files under the directory",
+    "displayName": "Count files",
+    "count-files": "Count files"
+}

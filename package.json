@@ -1,0 +1,49 @@
+{
+	"id": "count-files",
+	"name": "count files",
+	"description": "%description%",
+	"displayName": "%displayName%",
+	"version": "1.0.0",
+	"engines": {
+		"HBuilderX": "^3.2.6"
+	},
+	"activationEvents": [
+		"onCommand:count-files"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "count-files",
+				"title": "%count-files%"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "count-files",
+					"group": "z_commands",
+					"when": "explorerResourceCount == 1 && explorerResourceIsFolder"
+				},
+				{
+					"group": "z_commands",
+                    "when": "explorerResourceCount == 1 && explorerResourceIsFolder"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"dev": "npm run webpack:dev",
+		"build": "npm run webpack:build",
+		"webpack:dev": "webpack -c webpack.dev.config.js",
+		"webpack:build": "webpack -c webpack.prod.config.js"
+	},
+	"devDependencies": {
+		"copy-webpack-plugin": "^10.2.4",
+		"hxnls-dev": "^4.0.1",
+		"webpack": "^5.72.0",
+		"webpack-cli": "^4.9.2",
+		"webpack-merge": "^5.8.0",
+		"webpack-nls-plugin": "^1.0.0"
+	}
+}

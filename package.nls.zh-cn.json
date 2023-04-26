@@ -1,0 +1,5 @@
+{
+    "description": "统计指定目录下文件的数量",
+    "displayName": "统计文件数量",
+    "count-files": "统计文件数量"
+}
